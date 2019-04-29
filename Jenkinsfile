@@ -13,10 +13,10 @@ pipeline {
                 }
             }
         }
-        /*
         stage("docker") {
             steps {
-                //ToDo: add code
+                sh 'docker-compose build'
+                sh 'docker-compose push'
             }
         }
 
@@ -28,7 +28,6 @@ pipeline {
 
             }
         }
-        */
     }
 
     post {
