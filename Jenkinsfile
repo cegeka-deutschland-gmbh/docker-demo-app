@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                //ToDo: add code
+                withMaven(maven: "maven"){
+                    sh "mvn clean package"
+                }
             }
         }
         stage("docker") {
