@@ -13,6 +13,7 @@ pipeline {
                 }
             }
         }
+        /*
         stage("docker") {
             steps {
                 //ToDo: add code
@@ -27,6 +28,7 @@ pipeline {
 
             }
         }
+        */
     }
 
     post {
