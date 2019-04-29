@@ -19,16 +19,18 @@ pipeline {
                 sh 'docker-compose push'
             }
         }
-/*
+
         stage("deploy") {
             steps {
                 script {
-                    //ToDo: add code
+                    if (sh(script: 'docker service ls', returnStdout: true).contains("demo-app")) {
+                        sh "docker service update --image registry:5000/demo-app:${TAG} demo-app"
+                    } else {
+                        sh "docker service create --name demo-app --constraint=node.role==worker --publish published=80,target=9000 registry:5000/demo-app:${env.BUILD_NUMBER}"
+                    }
                 }
-
             }
         }
-        */
     }
 
     post {
