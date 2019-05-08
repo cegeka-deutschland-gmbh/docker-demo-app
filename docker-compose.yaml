@@ -2,3 +2,7 @@ version: '3'
 
 services:
   demo-app:
+    image: ${TAG}
+    build: .
+    ports:
+      - "80:9000"

@@ -6,13 +6,13 @@ pipeline {
     }
 
     stages {
-        /*
         stage("Build") {
             steps {
-                //ToDo: add code
+                withMaven("maven"){
+                    sh "mvn clean package"
+                }
             }
         }
-        */
         /*
         stage("docker") {
             steps {
