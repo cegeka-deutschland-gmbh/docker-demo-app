@@ -6,17 +6,21 @@ pipeline {
     }
 
     stages {
+        /*
         stage("Build") {
             steps {
                 //ToDo: add code
             }
         }
+        */
+        /*
         stage("docker") {
             steps {
                 //ToDo: add code
             }
         }
-
+        */
+        /*
         stage("deploy") {
             steps {
                 script {
@@ -25,6 +29,7 @@ pipeline {
 
             }
         }
+        */
     }
 
     post {
